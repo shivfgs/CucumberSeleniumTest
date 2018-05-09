@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import base.TestBase;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -15,45 +17,59 @@ import pages.SummerDressesPage;
 import util.ExcelUtil;
 import util.TestUtil;
 
-public class TestSteps  {
-private WebDriver driver;
+public class TestSteps extends TestBase {
 	
-	TestBase testbase;
-	HomePage homepage;
-	LoginPage loginpage;
-	CartSummaryPage cartsumpage;
-	MyAccountPage myactpage;
-	SummerDressesPage summerdresspage;
-	ExcelUtil exlutl;
+public TestSteps() throws Exception {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	TestBase testbase=new TestBase();
+	HomePage homepage=new HomePage();
+	LoginPage loginpage=new LoginPage(driver);
+	CartSummaryPage cartsumpage=new CartSummaryPage(driver);
+	MyAccountPage myactpage=new MyAccountPage(driver);
+	SummerDressesPage summerdresspage=new SummerDressesPage(driver);
+	ExcelUtil exlutl=new ExcelUtil();
+	@Before
+	public  void startUp() throws Exception {
+		
+		testbase.driverInitialization();
+		System.out.println("Initialization is completed.");
+	}
+	@After
+	public  void closeDown() {
+		// Close excel connection
+		// Close browser
+		//driver.quit();
+		testbase.closeBrowser();
+		System.out.println(testbase.getPageTitle() + " page is closed successfully.");
+	}
 	
 	@Given("^User Opens firefox$")
 	public void user_Opens_firefox() throws Throwable {
 	
-		
+	System.out.println("Browser is launched.");	
 		 
 		
 		
 	}
 	@Given("^User Opens \"([^\"]*)\"$")
 	public void user_Opens(String strBrowserName) throws Throwable {
-		 testbase=new TestBase();
-		 exlutl=new ExcelUtil();
-		 driver=base.TestBase.driver;
-		 
-		 homepage=new HomePage(driver);
-		 loginpage=new LoginPage(driver); 
-		 
+		
+		System.out.println("Browser "+strBrowserName + " is launched.");	
 		//String strCellValue=ExcelUtil.getCellData(1, 2);
 	}
 	@Given("^User starts  MyStore application$")
 	public void user_starts_MyStore_application() throws Throwable {
-	
+	Assert.assertEquals("MyStore", driver.getTitle());
 	}
 
 	@When("^User clicks Signin link$")
 	public void user_clicks_Signin_link() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		//homepage.clickSignIn();
+		homepage.clickSignIn();
 	}
 
 	@When("^User enters ssd@ssd\\.com address$")

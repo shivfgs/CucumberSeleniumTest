@@ -11,7 +11,7 @@ public class HomePageTest  {
 	
 	public static void main(String[] args) throws Throwable {
 		TestBase tb=new TestBase();
-		HomePage homepage=new HomePage(TestBase.driver);
+		HomePage homepage=new HomePage();
 		LoginPage loginpage=new LoginPage(TestBase.driver);
 		// Click on Sign In link
 		homepage.clickSignIn();

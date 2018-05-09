@@ -6,8 +6,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
-	private WebDriver driver;
+import base.TestBase;
+
+public class HomePage extends TestBase{
+	//private WebDriver driver;
  // POM : Web elements on this page
 	@FindBy(xpath=".//a[@class='login']")
 	WebElement lnkSignIn;
@@ -33,8 +35,9 @@ public class HomePage {
 		// To navigate on submenu Summer dresses
 		public void hoverMenu() {
 							
-			Actions builder = new Actions(driver);
-			builder.moveToElement(mnuDresses).perform();
+			Actions action = new Actions(driver);
+			action.moveToElement(mnuDresses).build().perform();
+			mnuSummerDresses.click();
 		}		
 			
 		/*
@@ -43,19 +46,11 @@ public class HomePage {
 		 * Parameters: Web driver
 		 * Author: Shiv
 		 * */
-		public HomePage(WebDriver driver) throws Exception {
-			this.driver=driver;
-			initializeWebElements();
-			System.out.println("HomePage OK");
-		}
-		/*
-		 * Function Name : initializeWebElements
-		 * Description: This function initializes Web elements in this pag class.
-		 * Parameters: Driver and This
-		 * Author: Shiv
-		 * */
-		public void initializeWebElements() {
+		public HomePage() throws Exception {
+			//this.driver=driver;
+			//initializeWebElements();
 			PageFactory.initElements(driver, this);
 		}
+		
 		
 }

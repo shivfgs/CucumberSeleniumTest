@@ -24,8 +24,6 @@ public class TestBase {
 		try {
 			FileInputStream fis=new FileInputStream(TestUtil.CONFIG_FILE_PATH+TestUtil.CONFIG_FILE_NAME);
 			prop.load(fis);
-			System.out.println("Testbase fis OK");
-			driverInitialization();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.getMessage();
@@ -34,7 +32,7 @@ public class TestBase {
 			
 	}
 	
-	public static void driverInitialization() throws Exception {
+	public  void driverInitialization() throws Exception {
 		String chromeDriverPath=util.TestUtil.CHROME_DRIVER_PATH;
 		String ieDriverPath=util.TestUtil.IE_DRIVER_PATH;
 		
