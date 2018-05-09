@@ -41,7 +41,9 @@ Examples:
 
 @RegressionTest
 Scenario Outline: Verify the Prodcut Sort By price functionality
-Given  Summer Dresses MyStore page is opened 
+Given  User Opens "<browser>" 
+And    User starts  MyStore application
+When   User navigates to Megamenu "<strMenu>" "<strSubMenu>"
 And    User selects value from the Sort By combo box "<strPriceLowest>" 
 Then   User verifies products arrangement order as lowest price first
 And    User selects value from the Sort By combo box "<strPriceHighest>"
@@ -51,9 +53,9 @@ Examples:
 |Price: Lowest first|Price: Highest first|
 @RegressionTest
 Scenario Outline: Select the product And verify the Cart Summary
-Given  User Opens <browser> 
+Given  User Opens "<browser>" 
 And    User starts  MyStore application
-And    User navigates on Megamenu "Dress-> Summer dresses"
+When   User navigates to Megamenu "<strMenu>" "<strSubMenu>"
 When   User selects a product "<productName>"
 And    User selects a "<productColor>"
 And    User clicks to Add to cart button

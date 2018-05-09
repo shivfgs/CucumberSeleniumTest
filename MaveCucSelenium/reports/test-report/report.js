@@ -177,21 +177,21 @@ formatter.match({
   "location": "TestSteps.user_Opens(String)"
 });
 formatter.result({
-  "duration": 15029488831,
+  "duration": 18353226003,
   "status": "passed"
 });
 formatter.match({
   "location": "TestSteps.user_starts_MyStore_application()"
 });
 formatter.result({
-  "duration": 36829,
+  "duration": 49508,
   "status": "passed"
 });
 formatter.match({
   "location": "TestSteps.user_clicks_Signin_link()"
 });
 formatter.result({
-  "duration": 32603,
+  "duration": 60375,
   "status": "passed"
 });
 formatter.match({
@@ -204,42 +204,42 @@ formatter.match({
   "location": "TestSteps.user_enters(String)"
 });
 formatter.result({
-  "duration": 89354,
+  "duration": 135843,
   "status": "passed"
 });
 formatter.match({
   "location": "TestSteps.user_clicks_on_Create_an_account_button()"
 });
 formatter.result({
-  "duration": 32602,
+  "duration": 44678,
   "status": "passed"
 });
 formatter.match({
   "location": "TestSteps.user_enters_all_the_other_required_information()"
 });
 formatter.result({
-  "duration": 32602,
+  "duration": 42263,
   "status": "passed"
 });
 formatter.match({
   "location": "TestSteps.user_clicks_Create_an_account_button()"
 });
 formatter.result({
-  "duration": 30791,
+  "duration": 40451,
   "status": "passed"
 });
 formatter.match({
   "location": "TestSteps.user_verifies_that_user_registration_is_successful()"
 });
 formatter.result({
-  "duration": 38036,
+  "duration": 49507,
   "status": "passed"
 });
 formatter.match({
   "location": "TestSteps.user_verifies_My_Account_page()"
 });
 formatter.result({
-  "duration": 36828,
+  "duration": 39848,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -359,14 +359,14 @@ formatter.match({
   "location": "TestSteps.user_Opens(String)"
 });
 formatter.result({
-  "duration": 12620044894,
+  "duration": 10823573557,
   "status": "passed"
 });
 formatter.match({
   "location": "TestSteps.user_starts_MyStore_application()"
 });
 formatter.result({
-  "duration": 36224,
+  "duration": 33206,
   "status": "passed"
 });
 formatter.match({
@@ -383,7 +383,7 @@ formatter.match({
   "location": "TestSteps.user_navigates_to_Megamenu(String,String)"
 });
 formatter.result({
-  "duration": 188370,
+  "duration": 149729,
   "status": "passed"
 });
 formatter.match({
@@ -396,7 +396,7 @@ formatter.match({
   "location": "TestSteps.user_verifies_that_Summer_dresses_page_had_opened(String)"
 });
 formatter.result({
-  "duration": 88147,
+  "duration": 90562,
   "status": "passed"
 });
 });
